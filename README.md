@@ -10,16 +10,27 @@ Welcome to the JAM Media Assets repository! This repository contains media asset
 - OpenGraph images for social sharing
 - Backgrounds in various formats (original, 2K, webp)
 - Favicons and square icons
+- Merch: T-shirts, stickers
 
 ### Pictures
 - Photos from events such as:
   - **2024-11 - Bangkok**: Includes event highlights, group photos, and candid moments.
   - **2024-10 - Lisbon**: Features merch, implementors, and team images.
+  - **2025-05 - JAM Experience** - Lisbon
 
 ### Logo
 - Official JAM logos in multiple formats (PNG, SVG, WebP)
 - Wordmarks and compact logo variations
 ---
+
+### Audio
+ - JAM Related mp3 songs
+
+### Fonts
+ - Font files used in various JAM content
+
+### Diagrams 
+ - Technical Diagrams with educational content about JAM
 
 ## Usage Instructions
 
