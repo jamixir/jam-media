@@ -1,0 +1,36 @@
+' https://www.plantuml.com/plantuml/duml/PP4_JyCm44TtVufJ1xOE_0491jHGIiH4rOfqliJNzbJ73kSpej-Uf4rK1URtydknFOkAegbsnc2bGM3XxMSaCGsASiKDUeN9Is9dIIQ04JRBCSiJ2deDPvgFOUOS5EZOeWQ99wFuOoJBmyUPCNqUfizj29xW6bRqbIWgp4FT94Nbu4sBMY5l-GsiKrcpmYR80PPO7N179X_mBRoHLdkuWeA4jqTuhviWIXRMjAl9QxouTx3ueIefZRRWOxkTplV8_cnchNa_YgwecppJuaHVEQfmsKqjvfTICHWFiDOW1B4dWDx2CfMEunwo69EWhoYQR0W-3h-VVICxBDcn7l_Z_W3T3PaPUTizwoy0
+
+@startuml Work Package Flow
+
+actor "<b>End User</b>" as U
+participant "<b>Validator as\n<b>Builder" as WP
+participant "<b>Validator as\n<b>Guarantor" as G
+participant "<b>All Validators" as V
+participant "<b>Validator as\n<b>Auditor" as A
+
+legend
+..... off-chain
+___ on-chain
+end legend
+
+U --> WP : 1 Request Computation
+WP --> G : 2 Submit Work Package
+G --> G : 3 Fetch & Verify Imported Segments
+G --> G : 4 Execute Work Package <b><color blue>(Refine)</color></b>
+G --> V : 5 Distribute Erasure Coded Segments
+V --> V : 6 Store Segments
+V -> V : 7 Publish Assurances
+G -> V : 8 Publish Guarantee
+V -> V : 9 <b><color blue>Accumulate</color></b>
+A --> A : 11 Audit Work Report
+A -> V : 12 Publish Judgements
+WP -> WP : 13 Chain Observe
+
+alt Judgements OK
+  V -> V : 14 Finalize Block
+  WP --> U : 15 Response OK
+else Judgements Failed
+  note over V: Consensus not achieved,\npunishements or re-evaluations\nprocess 
+  WP --> U : 15 Response Error / Timeout
+end
+@enduml
