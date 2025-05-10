@@ -55,10 +55,13 @@ We welcome contributions! To suggest changes or add new assets:
 
 ---
 
-## License
+## License (only for pictures)
 
 These media assets are provided under the **[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/)**. You are free to share these materials, provided proper attribution is given and no modifications are made.
 
+## License Images, Logos, Fonts, Diagrams
+
+These media assets (images, logos, fonts, and diagrams) are provided under the **[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)**. You are free to share and adapt these materials for any purpose, even commercially, provided proper attribution is given.
 ---
 
 ## Contact
